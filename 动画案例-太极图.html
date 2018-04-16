@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画案例-太极图</title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid #000;
+            border-bottom: 200px solid #000;
+            border-radius: 50%;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-animation-name: rotate;
+            animation-name: rotate;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;            
+        }
+        div::before,div::after{
+            position:absolute;
+            width:199px;
+            height:199px;
+            border-radius:50%;
+        }
+        div::before{
+            content:"";
+            background:#fff;
+            box-sizing:border-box;
+            border:80px solid #000;
+            top:100px;
+        }
+        div::after{
+            content:"";
+            background:#000;
+            box-sizing:border-box;
+            border:80px solid #fff;
+            top:100px;
+            left:200px;
+        }
+        @-webkit-keyframes rotate{
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+        @keyframes rotate{
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
